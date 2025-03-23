@@ -12,4 +12,10 @@ class HotelController extends Controller
         $hotels = Hotel::all();
         return view('hotels.index', compact('hotels'));
     }
+
+    public function show($id)
+    {
+    $hotel = Hotel::findOrFail($id);
+    return view('hotels.show', compact('hotel'));
+    }
 }

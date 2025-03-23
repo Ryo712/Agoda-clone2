@@ -23,8 +23,9 @@
         <h1 class="my-4 text-center">Hotels</h1>
         
         <div class="row">
-            @foreach($hotels as $hotel)
-                <div class="col-md-4">
+        @foreach($hotels as $hotel)
+            <div class="col-md-4">
+                <a href="{{ route('hotels.show', $hotel->id) }}" class="text-decoration-none">
                     <div class="card hotel-card">
                         <div class="card-body">
                             <h5 class="card-title">{{ $hotel->name }}</h5>
@@ -35,8 +36,9 @@
                             <small>更新日: {{ $hotel->updated_at->format('Y-m-d') }}</small>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                </a>
+            </div>
+        @endforeach
         </div>
     </div>
 
