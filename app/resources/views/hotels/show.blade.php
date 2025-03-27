@@ -13,6 +13,11 @@
         <h1>{{ $hotel->name }}</h1>
         <h6>{{ $hotel->city }}</h6>
         <p>{{ $hotel->description }}</p>
+
+        <!-- 予約ボタン -->
+        <div class="mt-4 mb-4">
+            <a href="{{ url('/bookings/create', ['hotel_id' => $hotel->id]) }}" class="btn btn-primary">このホテルを予約する</a>
+        </div>
         
         <!-- 他のコンテンツ -->
     </div>
