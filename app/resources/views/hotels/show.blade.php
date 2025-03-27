@@ -11,6 +11,7 @@
     <div class="container">
         <!-- コンテンツ -->
         <h1>{{ $hotel->name }}</h1>
+        <h6>{{ $hotel->city }}</h6>
         <p>{{ $hotel->description }}</p>
         
         <!-- 他のコンテンツ -->
